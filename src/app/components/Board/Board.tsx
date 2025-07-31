@@ -31,18 +31,13 @@ export function Board() {
                         url: "https://github.com/AdamEXu",
                         icon: "/github.svg",
                     },
-                    {
-                        name: "@TheTNTer",
-                        url: "https://x.com/TheTNTer",
-                        icon: "/twitter.svg",
-                    },
                 ]}
             />
             <Person
-                name="Natey H."
-                role="Something™"
+                name="Natey H"
+                role="Also does something"
                 image="https://cdn.hack.sv/counterspell/converted/CS_00001.jpeg"
-                description="Can't find a picture, here's a placeholder."
+                description="Holy yapper, does stuff too. Likes privacy."
                 socials={[
                     {
                         name: "natey@hack.sv",

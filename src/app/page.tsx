@@ -59,7 +59,7 @@ export default function Home() {
                     className={`py-5 px-5 sm:px-8 leading-relaxed text-black font-barlow-condensed transition-all duration-300 ${
                         isBlurred
                             ? "backdrop-blur-none opacity-0"
-                            : "bg-white/90 backdrop-blur-lg"
+                            : "bg-white/80 backdrop-blur-md"
                     }`}
                 >
                     {/* Header */}
