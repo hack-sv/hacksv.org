@@ -4,12 +4,7 @@ import { Person } from "./Person";
 
 export function Board() {
     return (
-        <div
-            className="grid gap-4 w-full"
-            style={{
-                gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl mx-auto">
             <Person
                 name="Adam Xu"
                 role="Probably does something"
@@ -51,6 +46,19 @@ export function Board() {
                 role="Does something"
                 image="https://cdn.hack.sv/scrapyard/temp/RushilWorkshop.jpeg"
                 description="This is a long description. Something something."
+                socials={[
+                    {
+                        name: "rushil@hack.sv",
+                        url: "mailto:rushil@hack.sv",
+                        icon: "/email.svg",
+                    },
+                ]}
+            />
+            <Person
+                name="SJ Zhu"
+                role="Does stuff as well"
+                image="https://cdn.hack.sv/counterspell/converted/CS_00010.jpeg"
+                description="Yet another description about life story."
                 socials={[
                     {
                         name: "rushil@hack.sv",

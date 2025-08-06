@@ -165,7 +165,7 @@ export default function ImageGridBackground({
         }
 
         loadImages();
-    }, [cdnBaseUrl, onImagesLoaded, onLoadError, shuffleSeed, totalImages]);
+    }, [cdnBaseUrl, onImagesLoaded, onLoadError, shuffleSeed]);
 
     // Handle resizing the grid using stored base images (no reshuffling)
     useEffect(() => {
