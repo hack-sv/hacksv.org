@@ -9,7 +9,7 @@ button.link-style {
     color: black;
     font-weight: 600; /* Semi-bold */
     text-decoration: none;
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     z-index: 1;
     overflow: hidden;
 }

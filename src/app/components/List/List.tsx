@@ -8,7 +8,7 @@ export default function List({ items }: ListProps) {
             {items.map((item, index) => (
                 <li
                     key={index}
-                    className="text-2xl text-black font-barlow-condensed"
+                    className="text-2xl text-black font-nunito-sans"
                 >
                     {item}
                 </li>

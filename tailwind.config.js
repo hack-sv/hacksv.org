@@ -8,8 +8,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                "barlow-condensed": [
-                    "var(--font-barlow-condensed)",
+                "nunito-sans": [
+                    "var(--font-nunito-sans)",
                     "sans-serif",
                 ],
                 vt323: ["var(--font-vt323)", "monospace"],

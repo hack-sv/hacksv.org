@@ -81,7 +81,7 @@ export default function SVGIcon({
     if (loading) {
         return (
             <div 
-                className={`${className} animate-pulse bg-gray-300`}
+                className={`${className} bg-white rounded-full opacity-50 animate-pulse`}
                 style={{ width, height }}
             />
         );

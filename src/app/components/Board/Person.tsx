@@ -1,43 +1,35 @@
 "use client";
 
 import { SVGIcon } from "../SVGIcon";
+import { MarkdownText } from "../MarkdownText";
 
 export function Person({
     name,
     role,
-    image,
     description,
     socials,
 }: {
     name: string;
     role: string;
-    image: string;
     description: string;
     socials: { name: string; url: string; icon: string }[];
 }) {
     return (
-        <div className="flex items-stretch gap-3 bg-[#00CCFF] p-4 rounded-lg text-white h-32">
-            {/* Full-height circular profile picture */}
-            <div className="aspect-square h-full rounded-full overflow-hidden flex-shrink-0">
-                <img
-                    src={image}
-                    alt={name}
-                    className="w-full h-full object-cover"
-                />
-            </div>
+        <div className="flex items-stretch gap-3 bg-[#00CCFF] p-[1rem] rounded-[2rem] text-white">
 
             {/* Text content - flexible sizing */}
             <div className="flex-1 min-w-0 flex flex-col justify-between">
                 <div>
-                    <h3 className="font-bold leading-tight text-xl">{name}</h3>
-                    <p className="opacity-90 leading-tight text-md">{role}</p>
-                    <p className="opacity-80 mt-1 leading-tight text-sm">
-                        {description}
+                    <h3 className="font-bold leading-tight text-xl">{name}{" "}
+                    <span className="opacity-90 leading-tight text-md font-normal ml-2">{role}</span>
+                    </h3>
+                    <p className="opacity-80 mt-1 leading-tight text-sm person-description">
+                        <MarkdownText>{description}</MarkdownText>
                     </p>
                 </div>
 
                 {/* Social icons - bottom aligned */}
-                <div className="flex gap-1 mt-2">
+                <div className="flex gap-2 mt-2">
                     {socials.map((social) => (
                         <div key={social.name} className="relative group">
                             <a
@@ -50,8 +42,8 @@ export function Person({
                                     src={social.icon}
                                     alt={social.name}
                                     className="text-white"
-                                    width={16}
-                                    height={16}
+                                    width={20}
+                                    height={20}
                                 />
                             </a>
                             {/* Tooltip */}

@@ -31,7 +31,7 @@ export default function Home() {
                 {/* Photo icon positioned absolutely to avoid opacity inheritance */}
                 <button
                     onClick={toggleBlur}
-                    className={`no-fancy-link z-10 p-2 rounded-lg transition-colors duration-200 text-[#00CCFF] bg-white ${
+                    className={`no-fancy-link z-10 p-2 rounded-lg transition-colors duration-200 transition-transform text-[#00CCFF] hover:scale-105 ${
                         isBlurred
                             ? "fixed"
                             : "absolute top-12 right-5 sm:right-8"
@@ -41,6 +41,8 @@ export default function Home() {
                             ? {
                                   top: `${buttonPosition.top}px`,
                                   left: `${buttonPosition.left}px`,
+                                  background: "rgba(255, 255, 255, 0.8)",
+                                  backdropFilter: "blur(4px)",
                               }
                             : {}
                     }
@@ -56,22 +58,19 @@ export default function Home() {
 
                 {/* Main content container */}
                 <div
-                    className={`py-5 px-5 sm:px-8 leading-relaxed text-black font-barlow-condensed transition-all duration-300 ${
+                    className={`py-5 px-5 sm:px-8 leading-relaxed text-black font-nunito-sans transition-all duration-300 ${
                         isBlurred
                             ? "backdrop-blur-none opacity-0"
                             : "bg-white/80 backdrop-blur-md"
                     }`}
                 >
                     {/* Header */}
-                    <div className="flex items-center gap-4 pb-4 mb-4 bg-white -mx-5 sm:-mx-8 px-5 sm:px-8 -mt-5 sm:-mt-20 pt-5 sm:pt-20">
+                    <div className="flex items-center gap-4 pb-4 mb-4 -mx-5 sm:-mx-8 px-5 sm:px-8 -mt-5 sm:-mt-20 pt-5 sm:pt-20">
                         <img
-                            src="/logo.svg"
+                            src="/Hack SV.svg"
                             alt="Hack SV Logo"
-                            className="w-32 object-contain"
+                            className="h-[10.4vw] md:h-20"
                         />
-                        <h1 className="text-6xl sm:text-8xl text-[#00CCFF] m-0 font-vt323">
-                            Hack SV
-                        </h1>
                     </div>
 
                     {/* Main content paragraphs */}
@@ -107,24 +106,25 @@ export default function Home() {
                         sponsoring or partnering with us, please reach out to us
                         at{" "}
                         <a
-                            href="mailto:team@hack.sv"
-                            data-text="team@hack.sv"
+                            href="mailto:contact@hacksv.org"
+                            data-text="contact@hacksv.org"
                             className="multiline"
                         >
-                            team@hack.sv
+                            contact@hacksv.org
                         </a>
                         . We&apos;re always looking for new opportunities to
                         collaborate and make a positive impact in our community!
                     </Paragraph>
 
                     {/* Board of Directors section */}
-                    <Section title="Board of Directors" whiteBackground>
+                    <Section title="Board of Directors">
                         <Board />
                     </Section>
 
                     {/* Public Filings section */}
                     <Section title="Public Filings (990s)">
-                        <List
+                        <p className="text-sm mb-6">There&apos;s nothing here yet! Check back after the end of our fiscal year, May 31. We aim to publish our 990s within 1 month of the end of our fiscal year, though it can take up to 6 months.</p>
+                        {/* <List
                             items={[
                                 <a
                                     key="2025"
@@ -135,12 +135,11 @@ export default function Home() {
                                     2025
                                 </a>,
                             ]}
-                        />
+                        /> */}
                     </Section>
                     <Paragraph>
-                        Hack SV (dba hack.sv) is a California nonprofit
-                        organization (EIN: 39-3466775) with pending 501(c)(3)
-                        status.
+                        Hack SV is a 501(c)(3) nonprofit
+                        organization (EIN: 39-3466775).
                     </Paragraph>
                 </div>
             </div>
